@@ -1,0 +1,89 @@
+name: tests
+on: [push]
+jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - uses: actions/upload-artifact@v4
+      with:
+        name: node_modules_artifact
+        path: node_modules
+  linter:
+    needs: install
+    name: Linter
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - uses: actions/download-artifact@v4
+      with:
+        name: node_modules_artifact
+        path: node_modules
+    - run: npm install -g mocha eslint nyc
+    - run: npm run lint
+  test:
+    needs: install
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - uses: actions/download-artifact@v4
+      with:
+        name: node_modules_artifact
+        path: node_modules
+    - run: npm install -g mocha eslint nyc
+    - run: npm run test
+    - uses: actions/upload-artifact@v4
+      with:
+        name: coverage_artifact
+        path: coverage
+  coverage:
+    needs: test
+    name: Coverage
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - uses: actions/download-artifact@v4
+      with:
+        name: node_modules_artifact
+        path: node_modules
+    - uses: actions/download-artifact@v4
+      with:
+        name: coverage_artifact
+        path: coverage
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
