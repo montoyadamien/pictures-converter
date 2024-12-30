@@ -47,8 +47,7 @@ describe('picture-converter.js tests', function () {
           const converter = new PictureConverter(inPath, testData.out, outPath);
           await converter.convertFile();
 
-          const data = fs.lstatSync(outPath).isFile();
-          assert.equal(data, true);
+          assert.equal(fs.lstatSync(outPath).isFile(), true);
           fs.rmSync(outPath);
         });
       })

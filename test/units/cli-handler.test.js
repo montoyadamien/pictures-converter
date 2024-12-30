@@ -10,8 +10,7 @@ describe('cli-handler.js tests', function () {
 
       const cliHandler = new CLIHandler('webp', [], inPath, false);
       await cliHandler.convertPictures();
-      const data = fs.lstatSync(outPath).isFile();
-      assert.equal(data, true);
+      assert.equal(fs.lstatSync(outPath).isFile(), true);
       fs.rmSync(outPath);
     });
 
@@ -22,10 +21,8 @@ describe('cli-handler.js tests', function () {
 
       const cliHandler = new CLIHandler('webp', ['png'], inPath, false);
       await cliHandler.convertPictures();
-      const data = fs.lstatSync(outPath).isFile();
-      assert.equal(data, true);
-      const data2 = fs.lstatSync(outPath2).isFile();
-      assert.equal(data2, true);
+      assert.equal(fs.lstatSync(outPath).isFile(), true);
+      assert.equal(fs.lstatSync(outPath2).isFile(), true);
       fs.rmSync(outPath);
       fs.rmSync(outPath2);
     });
@@ -36,8 +33,7 @@ describe('cli-handler.js tests', function () {
 
       const cliHandler = new CLIHandler('webp', [], inPath, true);
       await cliHandler.convertPictures();
-      const data = fs.lstatSync(outPath).isFile();
-      assert.equal(data, true);
+      assert.equal(fs.lstatSync(outPath).isFile(), true);
       fs.rmSync(outPath);
     });
 
