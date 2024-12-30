@@ -2,7 +2,6 @@
 	"name": "pictures-converter",
 	"version": "1.0.0",
 	"description": "Node.js image converter (JPEG, PNG, WebP, AVIF, TIFF, GIF)",
-	"main": "index.js",
 	"bin": {
 		"pictures-converter": "./bin/pictures-converter.js"
 	},
@@ -12,6 +11,7 @@
 	"type": "commonjs",
 	"scripts": {
 		"test": "npx nyc --reporter=lcov mocha 'test/**/*.js'",
+		"test-local": "npx nyc --reporter=text mocha 'test/**/*.js'",
 		"lint": "npx eslint . --fix"
 	},
 	"repository": {

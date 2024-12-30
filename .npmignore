@@ -1,0 +1,8 @@
+.github/
+node_modules/
+test/
+.gitignore
+.npmignore
+CHANGELOG.md
+eslint.config.mjs
+prettier.config.js
