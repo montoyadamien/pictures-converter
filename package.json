@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Node.js image converter (JPEG, PNG, WebP, AVIF, TIFF, GIF)",
 	"bin": {
-		"pictures-converter": "./bin/pictures-converter.js"
+		"pictures-converter": "bin/pictures-converter.js"
 	},
 	"directories": {
 		"test": "test"
@@ -15,7 +15,7 @@
 		"lint": "npx eslint . --fix"
 	},
 	"repository": {
-		"url": "https://github.com/montoyadamien/pictures-converter.git",
+		"url": "git+https://github.com/montoyadamien/pictures-converter.git",
 		"type": "git"
 	},
 	"bugs": {
