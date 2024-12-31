@@ -3,6 +3,7 @@ Node.js image converter (JPEG, PNG, WebP, AVIF, TIFF, GIF) CLI
 
 ![Validation workflow](https://github.com/montoyadamien/pictures-converter/actions/workflows/tests.yml/badge.svg?branch=main)
 [![Coverage Status](https://coveralls.io/repos/github/montoyadamien/pictures-converter/badge.svg?branch=main)](https://coveralls.io/github/montoyadamien/pictures-converter?branch=main)
+![NPM Version](https://img.shields.io/npm/v/pictures-converter?style=flat&logo=npm)
 
 ## Installation:
 This is a Node.js module, that can be run with the command line. First ensure you have npm installed, and then install as follows:
