@@ -1,9 +1,11 @@
 # pictures-converter
 Node.js image converter (JPEG, PNG, WebP, AVIF, TIFF, GIF) CLI
 
-![Validation workflow](https://github.com/montoyadamien/pictures-converter/actions/workflows/tests.yml/badge.svg?branch=main)
-[![Coverage Status](https://coveralls.io/repos/github/montoyadamien/pictures-converter/badge.svg?branch=main)](https://coveralls.io/github/montoyadamien/pictures-converter?branch=main)
-![NPM Version](https://img.shields.io/npm/v/pictures-converter?style=flat&logo=npm)
+[![Validation workflow](https://github.com/montoyadamien/pictures-converter/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/montoyadamien/pictures-converter/actions)
+[![Coveralls](https://img.shields.io/coverallsCoverage/github/montoyadamien/pictures-converter?branch=main&logo=coveralls&logoColor=rgb(149%2C%20157%2C%20165))](https://coveralls.io/github/montoyadamien/pictures-converter?branch=main)
+[![NPM Version](https://img.shields.io/npm/v/pictures-converter?style=flat&logo=npm&logoColor=rgb(149%2C%20157%2C%20165))](https://www.npmjs.com/package/pictures-converter)
+[![NPM Downloads](https://img.shields.io/npm/dw/pictures-converter?logo=npm&color=%23007ec6&logoColor=rgb(149%2C%20157%2C%20165))](https://www.npmjs.com/package/pictures-converter)
+[![NPM License](https://img.shields.io/npm/l/pictures-converter?logoColor=rgb(149%2C%20157%2C%20165))](https://github.com/montoyadamien/pictures-converter/blob/main/LICENSE)
 
 ## Installation:
 This is a Node.js module, that can be run with the command line. First ensure you have npm installed, and then install as follows:
