@@ -39,6 +39,11 @@ describe('picture-converter.js tests', function () {
           in: 'tiff',
           out: 'avif',
         },
+        {
+          path: 'test/data/7_test',
+          in: 'JPG',
+          out: 'avif',
+        },
       ].map(async (testData) => {
         it(`should convert a ${testData.in} file into a ${testData.out} one`, async function () {
           const inPath = `${testData.path}.${testData.in}`;
