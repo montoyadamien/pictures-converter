@@ -3,7 +3,7 @@ const {
 } = require('../lib/constants/available-extentions');
 
 class ArgsParser {
-  constructor() { }
+  constructor() {}
 
   /* istanbul ignore next */
   static displayAndExit(message) {

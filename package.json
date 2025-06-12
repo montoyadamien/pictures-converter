@@ -1,6 +1,6 @@
 {
 	"name": "pictures-converter",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Node.js image converter (JPEG, PNG, WebP, AVIF, TIFF, GIF)",
 	"bin": {
 		"pictures-converter": "bin/pictures-converter.js"
