@@ -1,8 +1,8 @@
-/* eslint mocha/no-async-describe: 0 */
+/* eslint mocha/no-async-suite: 0 */
 /* eslint mocha/no-setup-in-describe: 0 */
 
-const assert = require('assert');
-const fs = require('fs');
+const assert = require('node:assert');
+const fs = require('node:fs');
 const { PictureConverter } = require('../../lib/picture-converter');
 
 describe('picture-converter.js tests', function () {
