@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('node:assert');
 const { FilesFinder } = require('../../lib/files-finder');
 
 describe('files-finder.js tests', function () {

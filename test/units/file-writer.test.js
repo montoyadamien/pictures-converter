@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('node:assert');
 const { FileWriter } = require('../../lib/file-writer');
 
 describe('file-writer.js tests', function () {

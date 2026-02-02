@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('node:assert');
 const { ArgsParser } = require('../../bin/args-parser');
 
 describe('args-parser.js tests', function () {
