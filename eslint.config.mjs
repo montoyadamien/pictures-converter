@@ -20,6 +20,6 @@ export default [
   {
     ignores: ['node_modules', 'dist'],
   },
-  mochaPlugin.configs.flat.recommended,
+  mochaPlugin.configs.recommended,
   prettierPlugin,
 ];

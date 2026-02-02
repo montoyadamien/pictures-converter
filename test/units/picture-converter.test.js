@@ -1,4 +1,4 @@
-/* eslint mocha/no-async-describe: 0 */
+/* eslint mocha/no-async-suite: 0 */
 /* eslint mocha/no-setup-in-describe: 0 */
 
 const assert = require('node:assert');
